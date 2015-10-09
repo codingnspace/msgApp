@@ -1,0 +1,30 @@
+<div layout="column" style="height:600px" ng-cloak>
+  <md-toolbar md-scroll-shrink ng-if="true">
+    <div class="md-toolbar-tools">
+      <h3>
+        <span>Messages</span>
+      </h3>
+    </div>
+  </md-toolbar>
+
+  <md-content flex ng-controller="ReadMessageController as vm" id="messages">
+     <md-list>
+        <div ng-repeat="m in vm.messages" id="newMsg">
+      <md-list-item class="md-3-line">
+        <div ng-show="bey" >
+        <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTKJzH9KH7aN9NK-bJxO8abM8MQqsw0475ioFaSy8a3Rs9eBffA0A" alt="Beyonce" >
+      </div>
+        <div class="md-list-item-text">
+          <h3>{{m.title}}</h3>
+          <p>
+            {{m.msg}}
+          </p>
+        </div>
+        <md-divider inset></md-divider>
+      </md-list-item>
+  </div>
+    </md-list>
+
+  </md-content>
+
+</div>

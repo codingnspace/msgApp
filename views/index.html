@@ -1,13 +1,65 @@
 <!DOCTYPE html>
-<html >
+<html ng-app="MessageApp">
 <head>
 	<title>Message App</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/angular-material/angular-material.css">
 	<link rel="stylesheet" type="text/css" href="/css/site.css">
 </head>
 <body>
 
-	<ui-view></ui-view>
+<!-- SITE -->
+<div id="site" layout="row">
+	<div id="left" flex="15" class="hidden">
+	</div>
+	<div id="center" flex>
+		<div id="read">
+			<ui-view></ui-view>
+		</div> 	<!-- end READ -->
+	<div id="add" ng-controller="AddMessageController as vm" layout="column" style=" margin-top:0; padding-top:0;">
+
+		<md-content layout-padding class="autoScroll">
+			<form ng-submit=";vm.addMessage();vm.checkUser() ">
+			  <!-- <md-input-container class="md-icon-float" > -->
+				 <!-- Use floating label instead of placeholder -->
+				 <md-input-container  >
+				 <label>Name:</label>
+			 </md-input-container  >
+				 <!-- <input ng-model="vm.messages.name" type="text"> -->
+				 <md-radio-group  ng-model="vm.messages.userName">
+						<md-radio-button value="Beyonce" ng-model="vm.messages.bey" id="bey">Beyonce</md-radio-button>
+						<md-radio-button value="Kelly" id="kel"> Kelly </md-radio-button>
+						<md-radio-button value="Michelle" id="mic">Michelle</md-radio-button>
+				</md-radio-group>
+			  <!-- </md-input-container> -->
+				<md-input-container  >
+							 <!-- Use floating label instead of placeholder -->
+							 <label>Title</label>
+							 <md-icon md-svg-src="img/icons/ic_person_24px.svg" class="name"></md-icon>
+							 <input ng-model="vm.messages.title" type="text">
+						  </md-input-container>
+
+				<md-input-container flex>
+	<label>Message</label>
+	<textarea ng-model="vm.messages.msg" columns="1" md-maxlength="150"></textarea>
+</md-input-container>
+			  <div id="button"  style="text-align:right">
+			   	<md-button type="submit" class="md-raised">Send</md-button>
+				</div>
+		  </form>
+		</md-content>
+
+		</div>	<!-- end ADD -->
+<div class="hidden bottom">
+</div>
+</div> <!-- end CENTER -->
+
+<div id="right" flex="15" class="hidden">
+</div> <!-- end RIGHT -->
+
+</div> 	<!-- end SITE -->
+
+
 		<script src="/angular/angular.min.js"></script>
 		<script src="/angular-ui-router/release/angular-ui-router.min.js"></script>
 		<script src="/angular-material/angular-material.min.js"></script>
