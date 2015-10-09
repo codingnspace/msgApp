@@ -3,23 +3,21 @@ var o = {};
 
 o.addMessage = function(newMessage){
    var q = $q.defer();
-   $http.post("https://messageapp123.firebaseio.com/.json", newMessage).success(function(){
+   $http.post("https://dcmessageapp.firebaseio.com/.json", newMessage).success(function(){
       q.resolve();
    });
    return q.promise;
 };
 
-o.checkUser = function(x){
-
-for(var prop in x) {
-    if(x.hasOwnProperty(prop)) {
-        if(x[prop] === "Beyonce") {
-            var bey = true;
-            console.log("bey is true");
-            //Found myValue!
-        }
-    }
-}
+// o.checkUser = function(x){
+//
+//         if(document.getElementById('beyN').checked) {
+//             document.getElementById('bey').style.display="block";
+//             console.log("bey is true");
+//             //Found myValue!
+//         }
+//
+// }
  //  if(document.getElementById('bey').checked) {
  //      bey = true;
  //      console.log("bey was checked");
@@ -30,11 +28,11 @@ for(var prop in x) {
  //   if(vm.messages.prop === "Michelle") {
  //      var mic = true;
  //  }
-};
+// };
 
 o.readMessages = function(){
    var q = $q.defer();
-   $http.get("https://messageapp123.firebaseio.com/.json").success(function(res){
+   $http.get("https://dcmessageapp.firebaseio.com/.json").success(function(res){
       var messages = [];
       for(var prop in res){
          res[prop]._id = prop;

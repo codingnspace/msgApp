@@ -6,18 +6,35 @@
    height: 15px;
 }
 
-  body {
-     background-image: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/contemporary_china_2.png");
-     background-color: grey;
+#avatar{
+  height:50px;
+  width:50px;
+  border-radius: 4px;
+}
+
+/*#newMsg{
+  background-color: blue;
+  border-bottom: white 1px solid;
+}*/
+html {
+     background-image: url("https://c2.staticflickr.com/6/5100/5593071771_c8af990f83_b.jpg");
      background-size: contain;
  }
 
-.md-toolbar-tools {
-   background-color: grey;
-}
+ body {
+      background-image: url("https://c2.staticflickr.com/6/5100/5593071771_c8af990f83_b.jpg");
+      background-size: contain;
+  }
 
+.md-toolbar-tools {
+   background-color: #BCA297;
+}
+#form{
+  position: relative;
+  padding-top: 20px;
+}
 #messages{
-   max-height: 500px;
+   max-height: 400px;
 }
 
 md-radio-button{

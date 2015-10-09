@@ -10,7 +10,7 @@
 
 <!-- SITE -->
 <div id="site" layout="row">
-	<div id="left" flex="15" class="hidden">
+	<div id="left" flex="15" style="visibility:hidden">
 	</div>
 	<div id="center" flex>
 		<div id="read">
@@ -19,18 +19,23 @@
 	<div id="add" ng-controller="AddMessageController as vm" layout="column" style=" margin-top:0; padding-top:0;">
 
 		<md-content layout-padding class="autoScroll">
-			<form ng-submit=";vm.addMessage();vm.checkUser() ">
+			<form ng-submit="vm.addMessage(); vm.checkUser()" id="form">
 			  <!-- <md-input-container class="md-icon-float" > -->
 				 <!-- Use floating label instead of placeholder -->
 				 <md-input-container  >
 				 <label>Name:</label>
 			 </md-input-container  >
 				 <!-- <input ng-model="vm.messages.name" type="text"> -->
-				 <md-radio-group  ng-model="vm.messages.userName">
-						<md-radio-button value="Beyonce" ng-model="vm.messages.bey" id="bey">Beyonce</md-radio-button>
-						<md-radio-button value="Kelly" id="kel"> Kelly </md-radio-button>
-						<md-radio-button value="Michelle" id="mic">Michelle</md-radio-button>
-				</md-radio-group>
+				 <!-- <md-radio-group  ng-model="vm.messages.userName">
+						<md-radio-button value="Beyonce" ng-model="vm.messages.bey" id="beyN">Beyonce</md-radio-button>
+						<md-radio-button value="Kelly" id="kelN"> Kelly </md-radio-button>
+						<md-radio-button value="Michelle" id="micN">Michelle</md-radio-button>
+				</md-radio-group> -->
+				<select  id="nameOpt">
+					 <option value="Beyonce"  id="beyN">Beyonce</option>
+					 <option value="Kelly" id="kelN"> Kelly </option>
+					 <option value="Michelle" id="micN">Michelle</option>
+			 </select>
 			  <!-- </md-input-container> -->
 				<md-input-container  >
 							 <!-- Use floating label instead of placeholder -->
