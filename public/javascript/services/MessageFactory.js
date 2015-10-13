@@ -42,8 +42,6 @@ o.readMessages = function(){
    });
    return q.promise;
 
-   var objDiv = document.getElementById("newMsg");
-objDiv.scrollTop = objDiv.scrollHeight;
 }
 
 

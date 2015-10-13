@@ -7,6 +7,6 @@ vm.readMessages = function(){
    });
 };
 vm.readMessages();
-
+//set equal to a variable so that you can cencel $interval(vm.readMessages,3000, [cycle length])
 setInterval(function(){vm.readMessages();}, 3000);
 })

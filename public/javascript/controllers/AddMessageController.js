@@ -24,12 +24,10 @@ vm.checkUser = function(){
   if(e.options[e.selectedIndex].value === "Kelly") {
       vm.messages.avi ="http://beautifullysmagazine.com/wp-content/uploads/2013/12/KellyRowland2.jpg";
       vm.messages.bcol ="#CAD7B2";
-
   }
   if(e.options[e.selectedIndex].value === "Michelle") {
       vm.messages.avi = "http://i.imgur.com/Om2JR.jpg";
       vm.messages.bcol ="#EBE3AA";
-
   }
   // MessageFactory.checkUser(vm.messages);
   console.log("Check User function ran");
